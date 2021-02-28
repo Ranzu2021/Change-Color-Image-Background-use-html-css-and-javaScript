@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+.container .box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+.container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 100px;
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
+}
+.container .box span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px 5px;
+    background: #f00;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 2;
+}
+.container .box span.active {
+    border: 2px solid #000;
+    transform: scale(1.4);
+}
+.container .box span.one,
+.container .box i.one {
+    background: rgb(236, 10, 10);
+}
+.container .box span.two,
+.container .box i.two {
+    background: rgb(46, 201, 167);
+}
+.container .box span.three,
+.container .box i.three {
+    background: rgb(100, 39, 23);
+}
+.container .box span.four,
+.container .box i.four {
+    background: rgb(36, 24, 90);
+}
+.container .box span.five,
+.container .box i.five {
+    background: rgb(202, 51, 177);
+}
+.container .box span.six,
+.container .box i.six {
+    background: rgb(29, 126, 50);
+}
+.container .box span.seven,
+.container .box i.seven {
+    background: rgb(97, 165, 197);
+}
+
+.container .box span.active + i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: hue;
+}

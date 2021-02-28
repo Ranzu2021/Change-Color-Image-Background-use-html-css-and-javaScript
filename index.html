@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <span class="one active" onclick="changeColor(event)"></span>
+            <i class="one"></i>
+            <span class="two" onclick="changeColor(event)"></span>
+            <i class="two"></i>
+            <span class="three" onclick="changeColor(event)"></span>
+            <i class="three"></i>
+            <span class="four" onclick="changeColor(event)"></span>
+            <i class="four"></i>
+            <span class="five" onclick="changeColor(event)"></span>
+            <i class="five"></i>
+            <span class="six" onclick="changeColor(event)"></span>
+            <i class="six"></i>
+            <span class="seven" onclick="changeColor(event)"></span>
+            <i class="seven"></i>
+            <img src="image/watch.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        function changeColor(event){
+            // reset and remove active class frist
+            document.querySelectorAll('span.active').forEach(function(item){
+                item.classList.remove('active')
+            })
+            event.target.classList.add('active')
+        }
+    </script>
+</body>
+</html>
